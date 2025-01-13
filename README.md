@@ -62,4 +62,38 @@ riscv64-unknown-elf-objdump -d sum_1ton.o
 
 3. -O1: Enables basic optimization for better performance without significantly increasing compilation time.
 
-4. riscv64-unknown-elf-objdump: A tool for disassembling RISC-V binaries to examine the code structure and debug it effectively.
+4. riscv64-unknown-elf-objdump: A tool for disassembling RISC-V binaries to examine the code structure and debug it effectively.Task 2:
+*Debugging with SPIKE: Comparing -O1 and -Ofast Optimizations*
+
+*-O1:* A moderate optimization for balanced performance.
+
+*-Ofast:* A high-speed optimization that prioritizes performance over strict standards
+
+*add.c File*
+![sum code](![IMG-20250113-WA0001](https://github.com/user-attachments/assets/5360708a-ec12-4978-b9fe-86b6e5da6890)
+
+Commands:
+
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum.o sum.c
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum.o sum.c
+
+![Debugging O1](![IMG-20250113-WA0002](https://github.com/user-attachments/assets/aca28883-689b-4840-b03f-ca9c735e1004)
+
+![Debugging Ofast](![IMG-20250113-WA0003](https://github.com/user-attachments/assets/2b7272bb-9d60-42f9-b8eb-3231df155944)
+
+
+*Running on SPIKE*
+
+Commands:
+
+spike pk sum.o
+spike -d pk sum.o
+
+
+Objdump:
+
+riscv64-unknown-elf-objdump -d sum.o
+
+![Objdump -O1](![IMG-20250113-WA0005](https://github.com/user-attachments/assets/1e44253f-6b25-421a-9a42-d1958a727955)
+
+![Objdump -Ofast](![IMG-20250113-WA0004](https://github.com/user-attachments/assets/48f3a98c-031d-4a1c-9bce-fa4a3693346d)
