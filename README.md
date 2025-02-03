@@ -97,3 +97,5 @@ riscv64-unknown-elf-objdump -d sum.o
 ![Objdump -O1](![IMG-20250113-WA0005](https://github.com/user-attachments/assets/1e44253f-6b25-421a-9a42-d1958a727955)
 
 ![Objdump -Ofast](![IMG-20250113-WA0004](https://github.com/user-attachments/assets/48f3a98c-031d-4a1c-9bce-fa4a3693346d)
+
+For Task 4, you will simulate the RISC-V Core using the provided Verilog netlist and testbench. This involves setting up a simulation environment with tools like Icarus Verilog and GTKWave. You will run the simulation to verify the core's functional correctness, analyze the output signals, and capture waveform snapshots of executed instructions. These snapshots, along with a brief description explaining your understanding of RISC-V functional simulation and verification, should be uploaded to your GitHub repository.
